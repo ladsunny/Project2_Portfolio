@@ -5,3 +5,6 @@ class holding(models.Model):
     image = models.ImageField(upload_to='images/')
     company = models.CharField(max_length=50)
     weight = models.DecimalField(null=True,max_digits=5,decimal_places=2)
+
+    def __str__(self):
+        return self.company

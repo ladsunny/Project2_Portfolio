@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <link rel="icon" href="../../../../favicon.ico">
 
-  <title>Home Side with Stocks</title>
+  <title>{{ detailblog.title }}</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
@@ -29,7 +29,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="{% static 'Allocation_07182018.pdf' %}">My Portfolio</a>
-          <a class="nav-item nav-link" href="{% url 'myblog' %}">Blog</a>
+          <a class="nav-item nav-link active" href="{% url 'myblog' %}">Blog</a>
           <a class="nav-item nav-link" href="http://twitter.com/sidewithstocks">Twitter</a>
         </div>
       </div>
@@ -37,40 +37,14 @@
   </header>
 
   <main role="main">
-
-    <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Hi, I'm Nishant.</h1>
-        <p class="lead text-muted">Hey, my name is Nishant Sharma and I am an avid stock investor & trader. I have been investing in equities since 2003. You are welcome to checkout my stock portfolio and blog. However, please do not consider the information available on this site as professional financial advice. You should always do your own research, and invest carefully based on your risk/reward appetite.</p>
-        <img src="{% static 'IMG_2219.jpg' %}" height="200" />
-        <p>
-          <a href="{% url 'myblog' %}" class="btn btn-primary my-2">My Blog</a>
-          <a href="{% static 'Allocation_07182018.pdf' %}" class="btn btn-secondary my-2">My Portfolio</a>
-
-        </p>
-      </div>
-    </section>
-
-    <div class="album py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center">Top Holdings</h2>
-        <br />
-        <div class="row">
-
-          {% for myheld in myholdings.all %}
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <img class="card-img-top" src="{{ myheld.image.url }}">
-              <div class="card-body">
-                <p class="card-text">{{ myheld.company }}</p>
-                <p class="card-text">{{ myheld.weight }}%</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-
-        </div>
-      </div>
+    <div class="container">
+      <br />
+      <h1 class="pt-3">{{ detailblog.title }}</h1>
+      <p>{{ detailblog.pub_date }}</p>
+      <img class="img-fluid" src="{{ detailblog.image.url }}"  />
+      <br />
+      <br />
+      <p>{{ detailblog.body }}</p>
     </div>
 
   </main>
