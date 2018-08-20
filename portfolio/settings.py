@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'holdings.apps.HoldingsConfig',
+    'marketdata',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

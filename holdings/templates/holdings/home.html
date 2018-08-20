@@ -13,10 +13,10 @@
         <img src="{% static 'IMG_2219.JPG' %}" height="200"> </img>
         <p />
         <p />
-            <a href="{% static 'Allocation_07182018.pdf' %}" class="btn btn-danger my-2">Market Data</a>
+            <a href="{% url 'marketdata' %}" class="btn btn-danger my-2">Market Data</a>
         <p />
-            <a href="{% url 'myblog' %}" class="btn btn-primary my-2">My Blog</a>
-            <a href="{% static 'Allocation_07182018.pdf' %}" class="btn btn-success my-2">My Portfolio</a>
+            <a href="{% url 'myblog' %}" class="btn btn-primary my-2">Blog</a>
+            <a href="{% static 'Allocation_07182018.pdf' %}" class="btn btn-success my-2">Portfolio</a>
       </div>
     </section>
 
