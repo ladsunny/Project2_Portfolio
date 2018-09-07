@@ -5,3 +5,6 @@ from .models import holding
 def home(request):
     myholdings = holding.objects
     return render(request, 'holdings/home.html', {'myholdings':myholdings})
+
+def about(request):
+	return render(request,'holdings/about.html', {'about': 'About me'})
