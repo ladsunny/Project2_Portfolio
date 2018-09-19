@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'holdings.apps.HoldingsConfig',
     'marketdata',
+    'tradejournal',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
