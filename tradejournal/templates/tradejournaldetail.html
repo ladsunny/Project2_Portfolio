@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+  <main role="main">
+    <div class="container">
+      <br />
+      <h1 class="pt-3">{{ myjournaldetail.company }}</h1>
+      <p> Ticker: {{ myjournaldetail.ticker }}</p>
+      <p> Trade Date: {{ myjournaldetail.trade_date }}</p>
+      <p> Action: {{ myjournaldetail.action }}</p>
+      <p> Allocation: {{ myjournaldetail.allocation }}%</p>
+      <br />
+      <p>{{ myjournaldetail.justification|linebreaks }}</p>
+      <br />
+      <br />
+      <p> Publication Date: {{ myjournaldetail.pub_date }}</p>
+      <p> Tags: {{ myjournaldetail.tags }}</p>
+    </div>
+
+  </main>
+
+{% endblock %}

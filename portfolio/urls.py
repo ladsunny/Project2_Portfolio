@@ -25,4 +25,5 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('marketdata/', include('marketdata.urls')),
     path('about/', holdings.views.about, name='about'),
+    path('tradejournal/', include('tradejournal.urls')),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
