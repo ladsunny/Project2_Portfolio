@@ -3,7 +3,7 @@ from .models import tradingjournal
 
 # Create your views here.
 def journal(request):
-    mytradejournal = tradingjournal.objects
+    mytradejournal = tradingjournal.objects.all().order_by('-trade_date')   
     return render(request, 'tradejournals.html', {'mytradejournal':mytradejournal})
 
 def journaldetail(request, journal_id):
