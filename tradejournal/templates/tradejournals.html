@@ -7,7 +7,7 @@
 
     <section class="jumbotron text-center">
       <div class="container">
-        <p class="lead text-muted">I post my trades on this page after they have been settled. Please do not consider this information as investment advice. Like any other investment, stocks can be risky. And, I take no responsibility for your investment decisions.</p>
+        <p class="lead text-muted">On this page, I post all of my trades after they have been settled. Please do not consider this information as investment advice.</p>
       </div>
     </section>
 
@@ -19,17 +19,17 @@
 					<table class="table table-striped table-bordered table-hover table-sm">
 					  <thead class="thead-dark">
 					    <tr>
-					      <th scope="col">Ticker </th>
-								<th scope="col">Action</th>
-								<th scope="col">Trade Date</th>
+					      <th class="text-center" scope="col">Ticker </th>
+								<th class="text-center" scope="col">Action</th>
+								<th class="text-center" scope="col">Trade Date</th>
 					    </tr>
 					  </thead>
 					  <tbody>
 					{% for diary in mytradejournal.all %}
 					    <tr>
-					      <td><a href="{% url 'journaldetail' diary.id %}"><h5>{{ diary.ticker }}</h5></a></td>
-					      <td>{{ diary.action }}</td>
-								<td>{{ diary.trade_date }}</td>
+					      <td class="text-center"><a href="{% url 'journaldetail' diary.id %}"><h5>{{ diary.ticker }}</h5></a></td>
+					      <td class="text-center">{{ diary.action }}</td>
+								<td class="text-center">{{ diary.trade_date }}</td>
 					    </tr>
 					{% endfor %}
 					  </tbody>

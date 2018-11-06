@@ -8,3 +8,6 @@ def home(request):
 
 def about(request):
 	return render(request,'holdings/about.html', {'about': 'About me'})
+
+def disclaimer(request):
+	return render(request,'holdings/disclaimer.html', {'disclaimer': 'Disclaimer'})

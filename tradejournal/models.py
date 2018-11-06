@@ -10,6 +10,7 @@ class tradingjournal(models.Model):
     pub_date = models.DateTimeField()
     justification = models.TextField()
     tags = models.CharField(max_length=300)
+    prev_allocation = models.DecimalField(null=True,max_digits=5,decimal_places=2)
 
     def __str__(self):
         return self.company

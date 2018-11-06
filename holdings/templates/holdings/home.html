@@ -8,12 +8,11 @@
 
     <section class="jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading">Welcome!</h1>
-        <p class="lead text-muted">Feel free to view stocks related information on this site, however, please do not consider it as investment advice. Like any other investment, stocks can be risky. And, I take no responsibility for your investment decisions.</p>
+        <h1 class="jumbotron-heading">Hello!</h1>
+        <p class="lead text-muted">Welcome to my site, decidated to trading & investing in stocks.</p>
         <img src="{% static 'IMG_2219.JPG' %}" height="200"> </img>
         <p />
-            <a href="{% url 'myblog' %}" class="btn btn-primary my-2">Blog</a>
-            <a href="{% static 'Allocation_07182018.pdf' %}" class="btn btn-success my-2">My Portfolio</a>
+            <a href="{% static 'Allocation110518.pdf' %}" class="btn btn-success my-2">My Portfolio</a>
             <br/>
             <a href="{% url 'journal' %}" class="btn btn-danger my-2">My Trade Journal</a>
       </div>
@@ -30,8 +29,8 @@
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="{{ myheld.image.url }}">
               <div class="card-body">
-                <p class="card-text">{{ myheld.company }}</p>
-                <p class="card-text">{{ myheld.weight }}%</p>
+                <p class="card-text">Name: {{ myheld.company }}</p>
+                <p class="card-text">Allocation: {{ myheld.weight }}%</p>
               </div>
             </div>
           </div>
