@@ -9,7 +9,7 @@ def marketdata(request):
 	stocknews = json.loads(stocknews_request.text)
 
 	# Grab Stocks Prices
-	stockprice_request = requests.get("https://api.iextrading.com/1.0/stock/market/batch?symbols=spy,amzn,googl,aapl,msft,fb,v,ma,baba,nflx,pypl,rht,tcehy,dis,gld,adbe,unh,ba,brk.b,jpm,rtn,gd,ea,intu,nvda,lmt,noc,bidu,intc,atvi,tsm,cmcsa,c,ttwo,tsla,asml,avgo,fdx,acn,sq,t,ntes,sbux&types=quote&range=1m&last=5")
+	stockprice_request = requests.get("https://api.iextrading.com/1.0/stock/market/batch?symbols=spy,amzn,googl,aapl,msft,fb,v,ma,baba,nflx,pypl,tcehy,dis,gld,adbe,unh,ba,brk.b,jpm,rtn,gd,ea,lmt,noc,intu,tsm,asml,avgo&types=quote&range=1m&last=5")
 	stockprice = json.loads(stockprice_request.content.decode('utf-8'))
 
 	#Grab Most Active Stocks
