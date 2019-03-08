@@ -12,9 +12,10 @@
         <p class="lead text-muted">I am investing in stocks, and building my portfolio for long-term success. And, I am sharing it all here at sidewithstocks.com </p>
         <img src="{% static 'IMG_2219.JPG' %}" height="200"> </img>
         <p />
-            <a href="{% static 'Allocation110518.pdf' %}" class="btn btn-success my-2">My Portfolio</a>
-            <br/>
-            <a href="{% url 'journal' %}" class="btn btn-danger my-2">My Trade Journal</a>
+            <a href="{% url 'journal' %}" class="btn btn-primary">My Trade Journal</a>
+            <a href="{% static 'Allocation110518.pdf' %}" class="btn btn-success my-2">Portfolio</a>
+            <a href="{% url 'myblog' %}" class="btn btn-danger my-2">Blog</a>
+
       </div>
     </section>
 
