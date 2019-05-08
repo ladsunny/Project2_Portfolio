@@ -29,9 +29,9 @@
         <div class="navbar-nav ml-auto">
           <!-- <a class="nav-item nav-link" href="{% url 'marketdata' %}">Market Data</a> -->
           <a class="nav-item nav-link" href="{% url 'journal' %}">My Trade Journal</a>
-          <a class="nav-item nav-link" href="{% static 'PortfolioMarch2019.pdf' %}">Portfolio</a>
+          <a class="nav-item nav-link" href="{% static 'PortfolioMarch2019.pdf' %}" rel="noopener noreferrer" target="_blank">Portfolio</a>
           <a class="nav-item nav-link" href="{% url 'myblog' %}">Blog</a>
-          <a class="nav-item nav-link" href="http://twitter.com/sidewithstocks">Twitter</a>
+          <a class="nav-item nav-link" href="http://twitter.com/sidewithstocks" rel="noopener noreferrer" target="_blank">Twitter</a>
           <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
         </div>
       </div>
@@ -43,7 +43,8 @@
 
   <footer class="text-muted">
     <div class="container text-center">
-      <p> &copy; Nishant Sharma {% now "Y" %}  </p>
+      <p></p>
+      <p> &copy; sidewithstocks.com ({% now "Y" %})  </p>
       <a href="{% url 'disclaimer' %}">Disclaimer</a>
       <p />
     </div>

@@ -9,13 +9,13 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Home</h1>
-        <p class="lead text-muted">As I invest in stocks, and build a portfolio for long-term success, I will be publishing all of my trades on sidewithstocks.com </p>
+        <p class="lead text-muted">As I invest in stocks & build a portfolio for long-term success, I will be reporting my trades on sidewithstocks.com</p>
         <img src="{% static 'IMG_2219.JPG' %}" height="200"> </img>
         <p />
             <br />
             <a href="{% url 'journal' %}" class="btn btn-primary">My Trade Journal</a>
             <br />
-            <a href="{% static 'PortfolioMarch2019.pdf' %}" class="btn btn-success my-2">Portfolio</a>
+            <a href="{% static 'PortfolioMarch2019.pdf' %}" class="btn btn-success my-2" rel="noopener noreferrer" target="_blank">Portfolio</a>
             <br />
             <a href="{% url 'myblog' %}" class="btn btn-danger my-2">Blog</a>
 
@@ -24,7 +24,7 @@
 
     <div class="album py-5 bg-light">
       <div class="container">
-        <h2 class="text-center">Top 3 Holdings</h2>
+        <h2 class="text-center">My Top 3 Holdings</h2>
         <br />
         <div class="row">
 
