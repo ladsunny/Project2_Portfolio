@@ -9,13 +9,13 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Home</h1>
-        <p class="lead text-muted">As I invest in stocks & build a portfolio for long-term success, I will be reporting my trades on sidewithstocks.com</p>
+        <p class="lead text-muted">As I invest in stocks & build a portfolio for long-term success, I will be publishing all of my trades on sidewithstocks.com</p>
         <img src="{% static 'IMG_2219.JPG' %}" height="200"> </img>
         <p />
             <br />
             <a href="{% url 'journal' %}" class="btn btn-primary">My Trade Journal</a>
             <br />
-            <a href="{% static 'PortfolioMarch2019.pdf' %}" class="btn btn-success my-2" rel="noopener noreferrer" target="_blank">Portfolio</a>
+            <a href="{% static 'PortfolioAugust2019.pdf' %}" class="btn btn-success my-2" rel="noopener noreferrer" target="_blank">Portfolio</a>
             <br />
             <a href="{% url 'myblog' %}" class="btn btn-danger my-2">Blog</a>
 
@@ -33,8 +33,8 @@
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="{{ myheld.image.url }}">
               <div class="card-body">
-                <p class="card-text">Name: {{ myheld.company }}</p>
-                <p class="card-text">Allocation: {{ myheld.weight }}%</p>
+                <p class="card-text">Ticker: {{ myheld.company }}</p>
+                <p class="card-text">Weight: {{ myheld.weight }}%</p>
               </div>
             </div>
           </div>
